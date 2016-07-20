@@ -17,11 +17,12 @@ then
     apt-get install -y memcached build-essential
 
     # Add nodejs repo
-    add-apt-repository -y ppa:chris-lea/node.js
+    #add-apt-repository -y ppa:chris-lea/node.js
+	curl -sL https://deb.nodesource.com/setup_6.x | sudo bash -
     apt-get -y update
 
     # Install nodejs
-    apt-get install -y nodejs
+    apt-get install -y nodejs npm
 
     # Install latest stable version of MongoDB
     apt-get install -y mongodb-10gen
