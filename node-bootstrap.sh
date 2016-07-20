@@ -7,8 +7,10 @@ sudo su
 if [ ! -d "/var/www" ]
 then
     # Add MongoDB to apt
-    apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
-    echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/10gen.list
+    #apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+    #echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/10gen.list
+	apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
+	echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
 
     # Update and begin installing some utility tools
     apt-get -y update
@@ -25,7 +27,8 @@ then
     apt-get install -y nodejs npm
 
     # Install latest stable version of MongoDB
-    apt-get install -y mongodb-10gen
+    apt-get install -y mongodb-org
+	#apt-get install -y mongodb-10gen
 
     # Symlink our host www to the guest /var/www folder
     ln -s /vagrant/www /var/www
