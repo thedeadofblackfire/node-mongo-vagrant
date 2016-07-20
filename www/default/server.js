@@ -15,6 +15,6 @@ var app = http.createServer( function( request, response ) {
 
 });
 
-// Listen for incoming requests on port 80
-app.listen(80);
+// Listen for incoming requests on port 8080
+app.listen(8080);
 
