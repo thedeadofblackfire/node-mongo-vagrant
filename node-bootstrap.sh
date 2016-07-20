@@ -24,7 +24,7 @@ then
     apt-get -y update
 
     # Install nodejs
-    apt-get install -y nodejs npm
+    apt-get install -y nodejs
 
     # Install latest stable version of MongoDB
     apt-get install -y mongodb-org
