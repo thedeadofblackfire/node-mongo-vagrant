@@ -1,4 +1,4 @@
-# Node.js / MongoDB / Ubuntu 14.04 64-bit Vagrant Box
+# Node.js / MongoDB 3.2 / Ubuntu 14.04 64-bit Vagrant Box
 
 ### How to Use
 1. Download and install VirtualBox by [clicking here](https://www.virtualbox.org/wiki/Downloads)
