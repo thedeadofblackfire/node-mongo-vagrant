@@ -1,5 +1,6 @@
 Vagrant.configure("2") do |config|
     config.vm.box = "ubuntu/trusty64"
+	config.vm.hostname = "node-box"
     #config.vm.box_url = "http://files.vagrantup.com/precise64.box"
     config.vm.provision :shell, :path => "node-bootstrap.sh"
     #config.vm.network :private_network, ip: '10.0.33.34'
